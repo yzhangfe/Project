@@ -12,6 +12,8 @@ RUN pip install jupyter jupyterlab xgboost
 RUN pip install networkx numpy pandas matplotlib scikit-learn
 ENV JUPYTER_ENABLE_LAB=yes
 
+RUN chmod 777 .
+RUN chmod 777 ./notebook.ipynb
 #RUN jupyter lab --allow-root --port 8324
 EXPOSE 8888
 # not to use root to run
